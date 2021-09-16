@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import '../App.css';
+import CharacterDetailComponent from "./CharacterDetailComponent";
 
 const CharacterComponent = ({dataResult, loaded}) => {
 
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        setCharacters(dataResult[0].results);
-    }, [dataResult])
-
-    console.log('results: ', characters)
+        setCharacters(dataResult.results);
+        // eslint-disable-next-line
+    }, [loaded]);
 
     return (
         characters.map((character, key) => {
             return (
-                <p key={key}>{character.name}</p>
+                <div key={key}>
+                    <CharacterDetailComponent character={character} />
+                </div>
             )
         })
     )
