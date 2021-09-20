@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import './SearchComponent.css';
 import CharacterDetailComponent from "./CharacterDetailComponent";
 
 const SearchComponent = ({searchValue, setSearchValue, dataResult}) => {
@@ -26,12 +26,14 @@ const SearchComponent = ({searchValue, setSearchValue, dataResult}) => {
     }, [searchValue]);
     
     return (
-    <div>
+    <div className="Searchbar">
         <input
         type="text"
         placeholder="Search..."
         value={searchValue}
         onChange={handleChange}
+        className="Searchbar-input"
+        alt="searchbar"
         />
             {
             searchResults.map((character, key) => {

@@ -1,0 +1,23 @@
+.CharacterDetail-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.CharacterDetail-content {
+    width: 100%;
+    max-width: 35%;
+    border: 1px solid red;
+    margin: 5px;
+}
+
+.CharacterDetail-title {
+    font-size: large;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.CharacterDetail-expanded {
+
+}
