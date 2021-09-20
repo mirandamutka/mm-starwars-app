@@ -13,12 +13,6 @@ function App() {
   const [searchString, setSearchString] = useState('');
 
   useEffect(() => {
-    console.log('setResults: ', results);
-    // eslint-disable-next-line
-  }, [loaded]);
-
-  useEffect(() => {
-    console.log('getting data')
     setLoaded(0)
     GetData(loaded, setLoaded, page, results, setResults)
     // eslint-disable-next-line

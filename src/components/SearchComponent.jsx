@@ -18,7 +18,6 @@ const SearchComponent = ({searchValue, setSearchValue, dataResult}) => {
                 character.name.toLowerCase().includes(searchValue)
             );
             setSearchResults(result);
-            console.log('search result', searchResults)
         } else {
             setSearchResults([]);
         }
